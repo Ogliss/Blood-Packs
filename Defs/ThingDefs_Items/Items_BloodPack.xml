@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceBase" Name="BloodPackBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef class="BloodPack.CompUseEffect_BloodPack" ParentName="BloodPackBase">
+    <defName>BloodPack</defName>
+    <label>혈액팩</label>
+    <description>환자에게 수혈을 할 수 있는 혈액팩 입니다.</description>
+    <graphicData>
+		<texPath>bloodpack</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+    <stackLimit>10</stackLimit>
+	<statBases>
+		<MarketValue>200</MarketValue>
+		<Mass>0.60</Mass>
+		<MaxHitPoints>50</MaxHitPoints>
+		<Flammability>0.5</Flammability>
+		<DeteriorationRate>2</DeteriorationRate>
+		<Beauty>-8</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>blood transfusion</useLabel>
+        <useDuration>400</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>BloodPack.CompUseEffect_BloodPack</compClass>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
