@@ -16,7 +16,7 @@
 		<graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 	<thingCategories>
-      <li>BodyPartsNatural</li>
+      <li>Medicine</li>
     </thingCategories>
     <stackLimit>10</stackLimit>
 	<statBases>
@@ -27,6 +27,7 @@
 		<DeteriorationRate>2</DeteriorationRate>
 		<Beauty>-8</Beauty>
     </statBases>
+    <tickerType>Rare</tickerType>
     <comps>
       <li Class="CompProperties_Usable">
         <useJob>UseItem</useJob>
@@ -39,6 +40,10 @@
       <li Class="CompProperties_UseEffect">
         <compClass>CompUseEffect_DestroySelf</compClass>
       </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>6</daysToRotStart>
+		<rotDestroys>true</rotDestroys>
+	  </li>
     </comps>
   </ThingDef>
 </Defs>
