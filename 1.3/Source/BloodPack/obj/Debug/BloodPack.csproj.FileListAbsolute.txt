@@ -7,3 +7,9 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood Pack\Source\Bl
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood Pack\Source\BloodPack\obj\Debug\BloodPack.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood Pack\Assemblies\BloodPack.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood Pack\Assemblies\BloodPack.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Packs\1.3\Source\BloodPack\obj\Debug\BloodPack.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Packs\1.3\Source\BloodPack\obj\Debug\BloodPack.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Packs\1.3\Source\BloodPack\obj\Debug\BloodPack.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Packs\1.3\Source\BloodPack\obj\Debug\BloodPack.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Packs\1.3\Source\BloodPack\obj\Debug\BloodPack.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Blood-Packs\1.3\Source\BloodPack\obj\Debug\BloodPack.pdb

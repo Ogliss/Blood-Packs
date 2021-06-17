@@ -2,7 +2,7 @@
 <LanguageData>
 
   <BloodPack>BloodPack</BloodPack>
-  <GoodwillChangedReason_MakeBloodPack>Blood drawing</GoodwillChangedReason_MakeBloodPack>
+  <GoodwillChangedReason_MakeBloodPack>Drew blood</GoodwillChangedReason_MakeBloodPack>
   <MessageHediffCuredByBloodPack>Health condition healed: BloodLoss.</MessageHediffCuredByBloodPack>
   <BloodPackkSettings_BloodDrawn>Blood Drawn: {0}</BloodPackkSettings_BloodDrawn>
 
