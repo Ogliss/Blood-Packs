@@ -30,9 +30,8 @@ namespace BloodPack
 						Faction faction = pawn.Faction;
 						Faction faction2 = billDoer.Faction;
 						int goodwillChange = -10;
-						string reason = Translator.Translate("GoodwillChangedReason_MakeBloodPack");
 						GlobalTargetInfo? lookTarget = new GlobalTargetInfo?(pawn);
-						faction.TryAffectGoodwillWith(faction2, goodwillChange, true, true, reason, lookTarget);
+						faction.TryAffectGoodwillWith(faction2, goodwillChange, true, true, HistoryEventDefOf.BloodPack_DrewBlood, lookTarget);
 					}
 				}
 			}

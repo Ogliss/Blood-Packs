@@ -32,4 +32,17 @@ namespace BloodPack
 		public static RecipeDef UseBloodPack;
 
 	}
+	[DefOf]
+	public static class HistoryEventDefOf
+	{
+		// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
+		static HistoryEventDefOf()
+		{
+			DefOfHelper.EnsureInitializedInCtor(typeof(RecipeDefOf));
+		}
+
+		// Token: 0x04000001 RID: 1
+		public static HistoryEventDef BloodPack_DrewBlood;
+
+	}
 }
