@@ -9,8 +9,8 @@
   
   <ThingDef class="BloodPack.CompUseEffect_BloodPack" ParentName="BloodPackBase">
     <defName>BloodPack</defName>
-    <label>혈액팩</label>
-    <description>환자에게 수혈을 할 수 있는 혈액팩 입니다.</description>
+    <label>blood pack</label>
+    <description>a bag of blood that can be used for transfusions.</description>
     <graphicData>
 		<texPath>bloodpack</texPath>
 		<graphicClass>Graphic_Single</graphicClass>

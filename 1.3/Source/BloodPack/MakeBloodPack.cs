@@ -6,10 +6,8 @@ using Verse;
 
 namespace BloodPack
 {
-	// Token: 0x02000003 RID: 3
 	public class MakeBloodPack : Recipe_InstallImplant
 	{
-		// Token: 0x06000002 RID: 2 RVA: 0x00002064 File Offset: 0x00000264
 		public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
 		{
 			bool flag = billDoer != null;
@@ -23,8 +21,8 @@ namespace BloodPack
 						billDoer,
 						pawn
 					});
-					MakeBloodPack.GiveBloodLoss(pawn);
-					MakeBloodPack.SpawnBloodPack(pawn, billDoer);
+					this.GiveBloodLoss(pawn);
+					this.SpawnBloodPack(pawn, billDoer);
 					if (pawn.Faction != null && billDoer != null && billDoer.Faction != null)
 					{
 						Faction faction = pawn.Faction;
@@ -37,16 +35,14 @@ namespace BloodPack
 			}
 		}
 
-		// Token: 0x06000003 RID: 3 RVA: 0x0000211C File Offset: 0x0000031C
-		private static void GiveBloodLoss(Pawn pawn)
+		private void GiveBloodLoss(Pawn pawn)
 		{
 			Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, pawn, null);
-			hediff.Severity = BloodPackSettings.BloodDrawn;
+			hediff.Severity = BloodPackMod.packSettings.BloodDrawn;
 			pawn.health.AddHediff(hediff, null, null, null);
 		}
 
-		// Token: 0x06000004 RID: 4 RVA: 0x0000215C File Offset: 0x0000035C
-		private static void SpawnBloodPack(Pawn pawn, Pawn billDoer)
+		private void SpawnBloodPack(Pawn pawn, Pawn billDoer)
 		{
 			Thing thing = ThingMaker.MakeThing(ThingDefOf.BloodPack, null);
 			GenPlace.TryPlaceThing(thing, pawn.Position, billDoer.Map, ThingPlaceMode.Near, null, null);

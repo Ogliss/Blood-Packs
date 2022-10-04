@@ -7,11 +7,13 @@ namespace BloodPack
 
     public class BloodPackSettings : ModSettings
     {
-        internal static float BloodDrawn = 0.25f;
+        public float BloodDrawn;
+        public string BloodDrawnBuffer;
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref BloodDrawn, "BloodPack_BloodDrawn", 0.25f);
+            Scribe_Values.Look(ref this.BloodDrawn, "BloodPack_BloodDrawn", 0.1f);
+            Scribe_Values.Look(ref this.BloodDrawnBuffer, "BloodPack_BloodDrawnBuffer", "0.1");
         }
     }
 }

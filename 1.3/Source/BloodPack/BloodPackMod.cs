@@ -10,9 +10,10 @@ namespace BloodPack
 
 	public sealed class BloodPackMod : Mod
 	{
+		public static BloodPackSettings packSettings;
 		public BloodPackMod(ModContentPack mcp) : base(mcp)
 		{
-
+			packSettings = GetSettings<BloodPackSettings>();
 		}
 
 		public override string SettingsCategory()
@@ -27,13 +28,13 @@ namespace BloodPack
 				ColumnWidth = rect.width
 			};
 			list.Begin(rect);
-			list.LabeledScrollbarSetting("BloodPackkSettings_BloodDrawn".Translate((BloodPackSettings.BloodDrawn.ToStringPercent())), ref BloodPackSettings.BloodDrawn);
+			list.LabeledScrollbarSetting("BloodPackkSettings_BloodDrawn".Translate(packSettings.BloodDrawn.ToStringPercent()), ref packSettings.BloodDrawn);
 			list.End();
 		}
 
 		public override void WriteSettings()
 		{
-			RecipeDefOf.BloodPack.workAmount = 4000 * BloodPackSettings.BloodDrawn;
+			RecipeDefOf.BloodPack.workAmount = 4000 * packSettings.BloodDrawn;
 			base.WriteSettings();
 		}
 

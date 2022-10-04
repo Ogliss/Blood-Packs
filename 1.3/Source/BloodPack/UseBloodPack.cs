@@ -5,10 +5,8 @@ using Verse;
 
 namespace BloodPack
 {
-	// Token: 0x02000004 RID: 4
 	public class UseBloodPack : Recipe_InstallImplant
 	{
-		// Token: 0x06000006 RID: 6 RVA: 0x00002198 File Offset: 0x00000398
 		public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
 		{
 			bool flag = billDoer != null;
@@ -22,16 +20,15 @@ namespace BloodPack
 						billDoer,
 						pawn
 					});
-					UseBloodPack.RemoveBloodLoss(pawn);
+					this.RemoveBloodLoss(pawn);
 				}
 			}
 		}
 
-		// Token: 0x06000007 RID: 7 RVA: 0x000021F0 File Offset: 0x000003F0
-		private static void RemoveBloodLoss(Pawn pawn)
+		private void RemoveBloodLoss(Pawn pawn)
 		{
 			Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss, false);
-			firstHediffOfDef.Severity -= BloodPackSettings.BloodDrawn;
+			firstHediffOfDef.Severity -= BloodPackMod.packSettings.BloodDrawn;
 			if (firstHediffOfDef.Severity<0f)
 			{
 				pawn.health.RemoveHediff(firstHediffOfDef);
