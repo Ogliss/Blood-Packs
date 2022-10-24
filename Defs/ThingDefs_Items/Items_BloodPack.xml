@@ -37,8 +37,8 @@
       <li Class="CompProperties_UseEffect">
         <compClass>BloodPack.CompUseEffect_BloodPack</compClass>
       </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>CompUseEffect_DestroySelf</compClass>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <orderPriority>6</orderPriority>
       </li>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>6</daysToRotStart>
